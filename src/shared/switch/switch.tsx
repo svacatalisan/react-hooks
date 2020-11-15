@@ -5,8 +5,8 @@ import styled from "styled-components";
 const Container = styled['label']`
 	position: relative;
 	display: inline-block;
-	width: 60px;
-	height: 34px;
+	width: 50px;
+    height: 30px;
 	margin-right: 15px;
 `;
 
@@ -25,8 +25,8 @@ const Slider = styled['span']`
 	&::before {
 		position: absolute;
 		content: "";
-		height: 26px;
-		width: 26px;
+		height: 20px;
+		width: 20px;
 		margin: 4px;
 		background-color: white;
 		border-radius: 50%;

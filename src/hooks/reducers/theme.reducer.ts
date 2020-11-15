@@ -6,7 +6,7 @@ const defaultState = {
     isDark: false
 };
 
-const ThemeReducer = (state: Theme = defaultState, action) => {
+const ThemeState = (state: Theme = defaultState, action) => {
 	switch (action.type) {
 		case "TOGGLE_DARK_MODE":
 			return {
@@ -17,4 +17,4 @@ const ThemeReducer = (state: Theme = defaultState, action) => {
 	}
 };
 
-export default ThemeReducer;
+export default ThemeState;

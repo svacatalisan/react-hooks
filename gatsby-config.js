@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+const path = require(`path`)
 
 module.exports = {
   /* Your site config here */
@@ -22,8 +23,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        useResolveUrlLoader: true
+        implementation: require("sass"),  // should be "dart-sass" instead, otherwise error
       },
-    }
+    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `assets`,
+    //     path: path.join(__dirname, `src`, `assets`),
+    //   },
+    // },
   ],
 }

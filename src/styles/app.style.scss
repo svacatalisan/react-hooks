@@ -1,0 +1,12 @@
+body {
+    margin: 0 !important;
+    div {
+        display: flex;
+        width: 100%;
+    }
+
+    .main-layout {
+        flex-flow: column;
+        height: 100vh;
+    }
+}
