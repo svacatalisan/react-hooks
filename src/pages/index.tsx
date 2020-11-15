@@ -4,7 +4,7 @@ import UserState from '../hooks/reducers/user.reducer';
 import ThemeState from '../hooks/reducers/theme.reducer';
 import Context from '../shared/context/context';
 import Layout from '../shared/layout/layout.component';
-import{ dark, light } from '../shared/theme/themes';
+import{ dark, purple } from '../shared/theme/themes';
 import '../styles/app.style.scss';
 
 const combineReducers = (slices) => (state, action) =>
@@ -30,7 +30,7 @@ export default function Home() {
   const [state, dispatch] = useReducer(rootReducer, initialState);
   return (
     <Context.Provider value={{ state, dispatch }}>
-			<ThemeProvider theme={state.ThemeState.isDark ? dark : light}>
+			<ThemeProvider theme={state.ThemeState.isDark ? dark : purple}>
 				<>
 					<Layout />
 				</>

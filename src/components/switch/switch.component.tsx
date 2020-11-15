@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Context from "../context/context";
+import Context from "../../shared/context/context";
 import styled from "styled-components";
 
 const Container = styled['label']`
@@ -17,7 +17,7 @@ const Slider = styled['span']`
 	cursor: pointer;
 	width: 100%;
 	height: 100%;
-	background-color: #ccc;
+	background-color: ${props => props.theme.navBarLink};
 	border-radius: 34px;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
@@ -42,7 +42,7 @@ const Input = styled['input']`
 	margin: 0;
 
 	&:checked + ${Slider} {
-		background-color: #2196f3;
+		background-color: ${props => props.theme.navBarLink};
 	}
 
 	&:checked + ${Slider}::before {

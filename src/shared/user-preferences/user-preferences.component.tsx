@@ -7,12 +7,12 @@ const UserInitials = styled['label']`
 	justify-content: center;
 	background: #ECEBF2;
 	border-radius: 50%;
-	color: #D4CDF5;
+	color: #A796EC;
 	position: relative;
 	display: flex;
-	width: 30px;
-    height: 30px;
-	margin-right: 15px;
+	width: 45px;
+    height: 45px;
+	margin: 10px 40px 10px 0;
 `;
 
 const UserPrefences = () => {

@@ -13,7 +13,8 @@ const Link = styled['a']`
   margin-right:auto;
   padding: 10px 20px;
   svg path {
-    fill: #fff;
+    fill: ${props => props.theme.navLinkText};
+    stroke: ${props => props.theme.navLinkText};
   }
   &:hover  {
     background: ${props => props.theme.navBarLinkHovered};
