@@ -1,4 +1,4 @@
-const white = "#FAFAFA";
+const white = "#fff";
 const iPurple = 'rgb(37, 17, 78)';
 const lPurple = '#4A387D';
 const iBlack = 'rgb(21, 19, 30)';
@@ -11,7 +11,9 @@ export interface ITheme {
 	navBarLink: string;
 	navBarLinkHovered: string;
 	navLinkText: string;
-	bodyBackgroundColor: string
+	bodyBackgroundColor: string;
+	mobileBackgroundMenu: string;
+	mobileTextMenu: string;
 }
 
 export const purple: ITheme = {
@@ -19,7 +21,9 @@ export const purple: ITheme = {
 	navBarLink: iPurple,
 	navBarLinkHovered: lPurple,
 	navLinkText: white,
-	bodyBackgroundColor: white
+	bodyBackgroundColor: white,
+	mobileBackgroundMenu: white,
+	mobileTextMenu: lPurple
 };
 
 export const dark: ITheme = {
@@ -27,5 +31,7 @@ export const dark: ITheme = {
 	navBarLink: iBlack,
 	navBarLinkHovered: lBlack,
 	navLinkText: white,
-	bodyBackgroundColor: ''
+	bodyBackgroundColor: '',
+	mobileBackgroundMenu: white,
+	mobileTextMenu: lBlack
 };

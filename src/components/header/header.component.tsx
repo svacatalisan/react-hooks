@@ -13,6 +13,9 @@ const Container = styled['div']`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ECEBF2;
+  @media only screen and (max-width: 600px) and (min-width: 320px)  {
+    justify-content: flex-end;
+  }
 `;
 
 export default function HeaderComponent() {

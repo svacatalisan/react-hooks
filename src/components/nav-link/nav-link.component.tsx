@@ -19,12 +19,25 @@ const NavLink = styled['a']`
   &:hover  {
     background: ${props => props.theme.navBarLinkHovered};
   }
+  @media only screen and (max-width: 600px) and (min-width: 320px)  {
+    svg {
+      display: none;
+    }
+    border-bottom: 1px solid ${props => props.theme.mobileTextMenu};
+    &:hover  {
+      background: ${props => props.theme.mobileBackgroundMenu};
+    }
+  }
 `;
 
 const LinkText = styled['label']`
   color: ${props => props.theme.navLinkText};
   font-size: 18px;
   padding-left: 15px;
+  @media only screen and (max-width: 600px) and (min-width: 320px)  {
+    color: ${props => props.theme.mobileTextMenu};
+    width: 100%;    
+  }
 `;
 
 interface INavLink {

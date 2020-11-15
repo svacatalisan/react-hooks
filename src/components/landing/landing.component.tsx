@@ -9,8 +9,11 @@ import {FcIdea} from 'react-icons/fc'
 const Landing = styled['div']`
   display: flex;
   flex-flow: column;
-  padding: 60px 0 0 40px;
+  padding: 60px 40px 40px 40px;
   width: 100%;
+  @media only screen and (max-width: 600px) and (min-width: 320px)  {
+    padding: 20px;
+  }
 `;
 
 export default function LandingComponent() {

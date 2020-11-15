@@ -3,7 +3,8 @@ import styled from "styled-components";
 import NavLinkComponent from '../nav-link/nav-link.component';
 import { GrGroup } from 'react-icons/gr';
 import { FaHeadset } from 'react-icons/fa';
-import {AiFillSetting} from 'react-icons/ai'
+import {AiFillSetting} from 'react-icons/ai';
+import {GiHamburgerMenu} from 'react-icons/gi';
 
 const SideNav = styled['div']`
   background: ${props => props.theme.navBarLink};
@@ -15,6 +16,31 @@ const SideNav = styled['div']`
   overflow: hidden;
   &.hidden {
     width: 70px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  @media only screen and (max-width: 600px) and (min-width: 320px)  {
+    position: absolute;
+    background: ${props => props.theme.mobileBackgroundMenu};
+    left: 0;
+    top: 0;
+    width: 80%;
+    &.hidden {
+      left: 10px;
+      top: 7px;
+      background: white;
+      width: 30px;
+      height: 30px;
+      .hamburger-menu {
+          display: flex;
+          fill: black;
+          stroke: black;
+      }
+      .routes {
+        display: none;
+      }
+    }
   }
 `;
 const Routes = styled['div']`
@@ -32,12 +58,13 @@ export default function SideNavBarComponent() {
       onMouseLeave={() => setExpanded(false)}
       className={`${expanded ? "" : "hidden"}`}
     >
-      <Routes>
+      <GiHamburgerMenu className="hamburger-menu" size="30px" fill="#fff"/>
+      <Routes className='routes'>
         <NavLinkComponent link="#" text="Circle Bank" icon={GrGroup}/>
         <NavLinkComponent link="#" text="Audience" icon={FaHeadset}/>
         <NavLinkComponent link="#" text="Agent Tool" icon={FaHeadset}/>
       </Routes>
-      <Routes>
+      <Routes className='routes'>
         <NavLinkComponent link="#" text="Settings" icon={AiFillSetting}/>
       </Routes>
     </SideNav>
