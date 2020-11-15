@@ -5,6 +5,7 @@ import { GrGroup } from 'react-icons/gr';
 import { FaHeadset } from 'react-icons/fa';
 import {AiFillSetting} from 'react-icons/ai';
 import {GiHamburgerMenu} from 'react-icons/gi';
+import {AiOutlineClose} from 'react-icons/ai';
 
 const SideNav = styled['div']`
   background: ${props => props.theme.navBarLink};
@@ -20,12 +21,18 @@ const SideNav = styled['div']`
   .hamburger-menu {
     display: none;
   }
+  .close-nav {
+    display: none;
+  }
   @media only screen and (max-width: 600px) and (min-width: 320px)  {
     position: absolute;
     background: ${props => props.theme.mobileBackgroundMenu};
     left: 0;
     top: 0;
     width: 80%;
+    .close-nav {
+      display: flex;
+    }
     &.hidden {
       left: 10px;
       top: 7px;
@@ -47,6 +54,11 @@ const Routes = styled['div']`
   display: flex;
   flex-flow: column;
   width: 1000px;
+  .close-nav {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
 `;
 
 export default function SideNavBarComponent() {
@@ -61,6 +73,7 @@ export default function SideNavBarComponent() {
       <GiHamburgerMenu className="hamburger-menu" size="30px" fill="#fff"/>
       <Routes className='routes'>
         <NavLinkComponent link="#" text="Circle Bank" icon={GrGroup}/>
+        <AiOutlineClose className="close-nav" size="20px" fill="#000" onClick={() => setExpanded(false)}/>
         <NavLinkComponent link="#" text="Audience" icon={FaHeadset}/>
         <NavLinkComponent link="#" text="Agent Tool" icon={FaHeadset}/>
       </Routes>

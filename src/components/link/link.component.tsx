@@ -30,7 +30,7 @@ const LinkText = styled['label']`
 interface ILink {
   link: string;
   icon: IconType;
-  text: string
+  text: string;
 }
 
 export default function LinkComponent(props: ILink) {

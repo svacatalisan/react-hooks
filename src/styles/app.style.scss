@@ -38,4 +38,22 @@ body {
     .margin-bottom-20 {
         margin-bottom: 20px;
     }
+
+    form {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+
+        textarea {
+            min-height: 70px;
+        }
+
+        span {
+            margin-top: 10px;
+            justify-content: flex-end;
+            input {
+                margin-right: 10px;
+            }
+        }
+    }
 }

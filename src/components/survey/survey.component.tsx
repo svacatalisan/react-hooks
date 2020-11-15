@@ -3,7 +3,7 @@ import { IconType } from "react-icons";
 import styled from "styled-components";
 
 const SurveyContainer = styled['div']`
-  background: #fff;
+  background: ${props => (props.theme.bodyBackgroundColor)};
   display: flex;
   flex-flow: column;
   margin: 25px 0;

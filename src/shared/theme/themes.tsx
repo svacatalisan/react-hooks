@@ -3,6 +3,7 @@ const iPurple = 'rgb(37, 17, 78)';
 const lPurple = '#4A387D';
 const iBlack = 'rgb(21, 19, 30)';
 const lBlack = 'rgb(71, 69, 81)';
+const darkGray = '#a9a9a9'
 
 const headerBackgroundLight = '#fff';
 
@@ -31,7 +32,7 @@ export const dark: ITheme = {
 	navBarLink: iBlack,
 	navBarLinkHovered: lBlack,
 	navLinkText: white,
-	bodyBackgroundColor: '',
+	bodyBackgroundColor: darkGray,
 	mobileBackgroundMenu: white,
 	mobileTextMenu: lBlack
 };

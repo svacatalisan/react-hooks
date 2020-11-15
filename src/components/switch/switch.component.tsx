@@ -8,6 +8,7 @@ const Container = styled['label']`
 	width: 50px;
     height: 30px;
 	margin-right: 15px;
+	margin-left: 5px;
 	@media only screen and (max-width: 600px) and (min-width: 320px)  {
 		width: 35px;
     	height: 25px;
@@ -57,9 +58,9 @@ const Input = styled['input']`
 	}
 
 	&:checked + ${Slider}::before {
-		-webkit-transform: translateX(10px);
-		-ms-transform: translateX(10px);
-		transform: translateX(10px);
+		-webkit-transform: translateX(26px);
+		-ms-transform: translateX(26px);
+		transform: translateX(26px);
 	}
 
 	&:focus + ${Slider} {
@@ -67,7 +68,11 @@ const Input = styled['input']`
 	}
 
 	@media only screen and (max-width: 600px) and (min-width: 320px)  {
-		
+		&:checked + ${Slider}::before {
+			-webkit-transform: translateX(10px);
+			-ms-transform: translateX(10px);
+			transform: translateX(10px);
+		}	
 	}
 `;
 
