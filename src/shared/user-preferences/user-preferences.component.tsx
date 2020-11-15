@@ -13,6 +13,11 @@ const UserInitials = styled['label']`
 	width: 45px;
     height: 45px;
 	margin: 10px 40px 10px 0;
+	@media only screen and (max-width: 600px) and (min-width: 320px)  {
+		width: 35px;
+		height: 35px;
+		margin: 10px 20px 10px 0;
+	}
 `;
 
 const UserPrefences = () => {

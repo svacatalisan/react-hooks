@@ -8,6 +8,10 @@ const Container = styled['label']`
 	width: 50px;
     height: 30px;
 	margin-right: 15px;
+	@media only screen and (max-width: 600px) and (min-width: 320px)  {
+		width: 35px;
+    	height: 25px;
+	}
 `;
 
 const Slider = styled['span']`
@@ -33,6 +37,13 @@ const Slider = styled['span']`
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
 	}
+
+	@media only screen and (max-width: 600px) and (min-width: 320px)  {
+		&::before {
+			height: 18px;
+			width: 18px;
+		}
+	}
 `;
 
 const Input = styled['input']`
@@ -46,13 +57,17 @@ const Input = styled['input']`
 	}
 
 	&:checked + ${Slider}::before {
-		-webkit-transform: translateX(26px);
-		-ms-transform: translateX(26px);
-		transform: translateX(26px);
+		-webkit-transform: translateX(10px);
+		-ms-transform: translateX(10px);
+		transform: translateX(10px);
 	}
 
 	&:focus + ${Slider} {
 		box-shadow: 0 0 1px #2196f3;
+	}
+
+	@media only screen and (max-width: 600px) and (min-width: 320px)  {
+		
 	}
 `;
 
