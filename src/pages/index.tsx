@@ -20,7 +20,7 @@ const initialState = { ThemeState: {
 	isDark: false
 	}, 
 	UserState: {
-		firstname: 'Rebeca',
+		firstname: 'Rebecca',
 		lastname: 'G'
 	} 
 };

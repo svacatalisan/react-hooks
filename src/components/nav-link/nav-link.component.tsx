@@ -9,10 +9,10 @@ const NavLink = styled['a']`
   align-items: center;
   justify-content: center;
   svg path {
-    fill: #fff;
+    fill: ${props => props.theme.navLinkText};
   }
   &:hover  {
-    background: #4A387D;
+    background: ${props => props.theme.navBarLinkHovered};
   }
 `;
 

@@ -5,8 +5,8 @@ import { GrGroup } from 'react-icons/gr';
 import { FaHeadset } from 'react-icons/fa';
 import {AiFillSetting} from 'react-icons/ai'
 
-const PageContainer = styled['div']`
-  background: rgb(37, 17, 78);
+const SideNav = styled['div']`
+  background: ${props => props.theme.navBarLink};
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -20,11 +20,11 @@ const PublicRoutes = styled['div']`
 `;
 
 export default function SideNavBarComponent() {
-  return <PageContainer>
+  return <SideNav>
     <PublicRoutes>
       <NavLinkComponent link="#" icon={GrGroup}/>
       <NavLinkComponent link="#" icon={FaHeadset}/>
     </PublicRoutes>
     <NavLinkComponent link="#" icon={AiFillSetting}/>
-  </PageContainer>
+  </SideNav>
 }
