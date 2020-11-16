@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import styled from "styled-components";
 import NavLinkComponent from '../nav-link/nav-link.component';
 import { GrGroup } from 'react-icons/gr';
@@ -6,6 +6,7 @@ import { FaHeadset } from 'react-icons/fa';
 import {AiFillSetting} from 'react-icons/ai';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {AiOutlineClose} from 'react-icons/ai';
+import useEventListener from '../../hooks/custom/event-handler.hook';
 
 const SideNav = styled['div']`
   background: ${props => props.theme.navBarLink};
@@ -63,12 +64,28 @@ const Routes = styled['div']`
 
 export default function SideNavBarComponent() {
   const [expanded, setExpanded] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null)
+  
+  // Event handler utilizing useCallback ...
+  // ... so that reference never changes.
+  const handler = useCallback(
+    (e) => {
+      if (e.target.classList.value.indexOf('hidden') >= 0) {
+        return setExpanded(true);
+      }
+      setExpanded(false);
+    },
+    [setExpanded]
+  );
+  
+  // Add event listener using our hook
+  useEventListener('mouseenter', handler, menuRef);
+  useEventListener('mouseleave', handler, menuRef);
 
   return (
     <SideNav
-      onMouseEnter={() => setExpanded(true)} 
-      onMouseLeave={() => setExpanded(false)}
       className={`${expanded ? "" : "hidden"}`}
+      ref={menuRef}
     >
       <GiHamburgerMenu className="hamburger-menu" size="30px" fill="#fff"/>
       <Routes className='routes'>

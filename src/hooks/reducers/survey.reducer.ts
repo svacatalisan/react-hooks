@@ -7,7 +7,6 @@ const defaultState = {
 };
 
 const SurveyState = (state: Survey = defaultState, action) => {
-    console.log('Alex form', action)
 	switch (action.type) {
 		case "UPDTE_QUESTION":
 			return {

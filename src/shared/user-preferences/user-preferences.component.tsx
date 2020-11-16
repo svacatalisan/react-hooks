@@ -23,7 +23,6 @@ const UserInitials = styled['label']`
 const UserPrefences = () => {
 	const { state, dispatch } = useContext(Context);
 	const { firstname, lastname } = state.UserState;
-	console.log('state', firstname);
 	const formatName = (): string => {
 		return `${firstname[0]}${lastname[0]}`;
 	}
